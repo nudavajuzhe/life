@@ -1,0 +1,21 @@
+<label>name</label>
+<input id="name">
+
+<button onclick="addUser()">add</button>
+
+<div id="pokaz">1</div>
+
+
+<script>
+    let inputName = document.getElementById('name')
+    let inputPokaz = document.getElementById('pokaz')
+
+    let users = []
+
+    function addUser() {
+        users.push(inputName.value)
+        inputName.value = ''
+
+        inputPokaz.innerText = users
+    }
+</script>
